@@ -1,0 +1,768 @@
+/* 
+https://i.imgflip.com/6avf8f.jpg
+*/
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* BUTTON SECTION */
+
+.MuiButton-root:hover .MuiButton-label {
+  background-color: rgb(26, 6, 73);
+  border: 0px rgb(77, 110, 201) solid;
+}
+
+.MuiButton-label {
+  background-color: rgb(59, 75, 128);
+  color:rgb(164, 199, 199);
+  font-size: 1.5em;  
+}
+
+.menu-button .MuiButton-label {
+  padding: 5%;
+  position:absolute;
+  top: 5650%;
+  left: 2000%;
+
+}
+
+.logout-button .MuiButton-label {
+  padding: 5%;
+  min-width: 120px;
+  position: absolute;
+  bottom: 200%;
+  left: 2000%;
+}
+
+.setting-button .MuiButton-label {
+  min-width: 120px;
+  position: absolute;
+	bottom: 145%;
+  left: 350%;
+}
+
+.profile-button .MuiButton-label {
+  min-width: 120px;
+  position: absolute;
+  top: 200%;
+  left: 90%;
+}
+
+.game-button .MuiButton-label {
+  text-decoration: none;
+  min-width: 250px;
+  min-height: 80px;
+}
+
+.solo-button .MuiButton-label {
+  min-width: 130px;
+  min-height: 40px;
+  font-size: 2em;
+}
+
+.create-button .MuiButton-label {
+  position: absolute;
+  top: 90px;
+}
+
+.removeFriend-button .MuiButton-label {
+  font-size: 1em;
+  min-width: 70px;
+}
+
+
+/*REGULAR HOME . JS*/
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.RegularHome {
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(36, 34, 46);
+}
+
+#profile {
+	position: absolute;
+	top: 4px;
+  	left: 10px;
+}
+
+.game-options-bg {
+    width: 25%;
+    height: 45%;
+    background-color: rgb(31, 42, 90);
+    border: 6px rgb(0,0,0) solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ADMIN HOME .JS */
+
+
+
+.userinfo {
+	color: rgb(164, 199, 199);
+  font-size: 1.2em;
+  font-weight: 600;
+  padding-right: 5%;
+}
+
+
+.AdminHomeInput {
+	background-color: lightblue;
+	color: rgb(36, 34, 46);
+	text-align: center;
+	font-size: 2em;
+}
+
+.AdminHome {
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(36, 34, 46);
+  
+}
+
+#AdminHomeInput {
+	display: inline-block;
+}
+
+.adminUserInput {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.adminUserInput label {
+  margin: 2.5px 5px 2.5px 0;
+  color: aqua;
+}
+
+.adminUserInput input {
+  vertical-align: middle;
+  margin: 2.5px 5px 2.5px 0;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.removeUser {
+  background-color: rgb(14, 3, 3);
+  color:rgb(249, 252, 252);
+  border: 4px solid;
+  margin: 2%;
+  
+  position: relative;
+}
+
+.adminUserTableContainer {
+  overflow: auto; 
+  max-height: 280px;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+tbody {
+  background-color: #584f4f;
+  color: white;
+}
+
+tr:hover {background-color: coral;}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+/* GAME COMPONENT STYLES */
+
+:root {
+  --unused-color: transparent;
+  --wrong-color: lightslategrey;
+  --close-color: khaki;
+  --right-color: darkseagreen;
+}
+
+
+.center {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inputGuess {
+  position:absolute;
+  top:85%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 5%;
+  background-color: lightblue;
+  color: rgb(36, 34, 46);
+  text-align: center;
+  font-size: 2em;
+  
+}
+
+.game-bg {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(36, 34, 46);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 4em);
+  gap: 0.5em;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(5, 4em);
+  grid-template-rows: 1fr;
+  gap: 0.5em;
+}
+
+.game-grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 4em);
+  gap: 0.5em;
+}
+
+.grid-row2 {
+  display: grid;
+  grid-template-columns: repeat(6, 4em);
+  grid-template-rows: 1fr;
+  gap: 0.5em;
+}
+
+.game-grid3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 4em);
+  gap: 0.5em;
+}
+
+.grid-row3 {
+  display: grid;
+  grid-template-columns: repeat(7, 4em);
+  grid-template-rows: 1fr;
+  gap: 0.5em;
+}
+
+
+.tile {
+  border: 0.1em solid lightblue;
+  color:white;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.85em;
+  display: flex;
+}
+
+.unused {
+  background-color: var(--unused-color);
+}
+
+.right {
+  background-color: var(--right-color);
+}
+
+.close {
+  background-color: var(--close-color);
+}
+
+.wrong {
+  background-color: var(--wrong-color);
+}
+
+.post-match {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  top: 40%;
+  left: 70%;
+  text-align: center;
+}
+
+.match-result {
+  font-size: 3em;
+  color: white;
+}
+
+.play-again-link {
+  text-decoration: none;
+}
+
+/* LOGIN .JS */
+
+label {
+  color:white
+}
+
+.signup-link {
+  text-decoration: none;
+}
+
+.back {
+  top: 10%;
+}
+
+h1 {
+  text-align:center;
+color: aqua;
+}
+
+h2 {
+
+color: aqua;
+}
+
+b {
+  color: aqua;
+}
+
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Login {
+text-align: center; 
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(36, 34, 46);
+
+}
+
+.Signup {
+  text-align: center; 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 34, 46);
+  
+  }
+
+.LoginInput {
+width: 50%;
+padding: 12px 20px;
+margin: 8px 0;
+display: block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+input[type=text], select {
+padding: 12px 20px;
+margin: 8px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-left: auto;
+  margin-right: auto
+
+}
+
+/* LOBBY .JS */
+#chatbox {
+	position: absolute;
+	background-color: rgb(111, 125, 189);
+	padding: 10px;
+	
+	/* Add properties below */
+	top: 10%;
+	left: 20px;
+	height: 80%;
+	width: 300px;
+}
+
+.background {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 34, 46);
+}
+  
+.chatbox {
+    width: 25%;
+	margin-left: 5%;
+	margin-top: 5%;
+    height: 80%;
+    background-color: rgb(31, 42, 90);
+    border: 6px rgb(0,0,0) solid;
+}
+
+.chatContainer{
+	padding: 2px;
+	margin-top: 2px;
+	margin-left: 10px;
+}
+
+.chatName{
+	font-weight: bold;
+	color:rgb(214, 204, 192)
+}
+
+.chatText{
+	color:antiquewhite
+}
+  
+.menu-link {
+    text-decoration: none;
+}
+  
+/* MULTI COMPONENTS Lobby, LobbySettings, MultiSelection */
+/* Styles for the Home React component */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.options {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(36, 34, 46);
+}
+
+.options-bg {
+  width: 25%;
+  height: 45%;
+  background-color: rgb(31, 42, 90);
+  border: 6px rgb(0,0,0) solid;
+}
+
+.op1-link {
+  margin-top: -4%;
+  text-decoration: none;
+}
+
+.op2-link {
+  margin-top: 6%;
+  text-decoration: none;
+}
+
+.menu-link {
+  text-decoration: none;
+}
+
+.win-link {
+  text-decoration: none;
+}
+
+.lose-link {
+  text-decoration: none;
+}
+
+.settingsHeader{
+  top: 13%;
+  position: absolute;
+}
+
+.headerText{
+  font-size: 4.5em;
+  color:rgb(164, 199, 199);
+}
+
+.optionContainer{
+display: block;
+position: relative;
+width: 80%;
+margin-top: -4%;
+text-decoration: none;
+margin-left: 5%;
+margin-top: 5%;
+height: 40px;
+}
+
+.optionText{
+  float: left;
+  font-size: 1.5em;
+  color:rgb(164, 199, 199);
+}
+
+
+.optionInput{
+  
+position: relative;
+float: right;
+height: 30px;
+width: 70px;
+color:rgb(51, 179, 179);
+cursor: text;
+/* margin: 5px; */
+margin-right: 20px;
+border-color: rgb(24, 170, 170);
+border-style: solid;
+border-width: 1px;
+}
+
+.optionInputText{
+  font-size: 1.5em;
+  color:rgb(164, 199, 199);
+}
+
+/* PROFILE COMPONENTS */
+
+
+
+.ProfilePage {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(36, 34, 46);
+
+}
+
+h1 {
+  color: rgb(183, 178, 212);
+}
+
+#setting {
+  padding-top: 2%;
+}
+
+.userInfo {
+  background-color: rgb(31, 42, 90);
+  color: aliceblue;
+  text-align: right;
+  padding: 3% 5% 3% 12%;
+
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  width: 20%;
+
+  border: 6px rgb(0,0,0) solid;
+}
+
+img {
+  position: absolute;
+  left: 12%;
+  top: 25%;
+
+  max-width: 50%;
+  max-height: 50%;
+
+  border-radius: 100%;
+}
+
+.gameStats {
+  background-color: rgb(31, 42, 90);
+  color: aliceblue;
+  text-align: left;
+  padding: 3%;
+
+  column-count: 2;
+  column-width: 5%;
+  position: absolute;
+  top: 42%;
+  left: 10%;
+  width: 31%;
+
+  border: 6px rgb(0,0,0) solid;
+}
+
+.left-col, .right-col {
+  padding: 1px 10px;
+}
+
+.recentGame {
+  background-color: rgb(31, 42, 90);
+  color: aliceblue;
+  text-align: left;
+  padding: 3%;
+
+  position: absolute;
+  top: 71%;
+  left: 10%;
+
+  width: 31%;
+
+  border: 6px rgb(0,0,0) solid;
+}
+
+.friendList {
+  background-color: rgb(31, 42, 90);
+  color: aliceblue;
+  text-align: left;
+  padding: 3%;
+
+  position: absolute;
+  top: 12%;
+  left: 60%;
+
+  border: 6px rgb(0,0,0) solid;
+}
+
+
+li {
+  list-style-type: none;
+  padding: 2% 0;
+}
+
+input[type=text] {
+  background-color: rgb(59, 75, 128);
+  font-size: 1.1em;
+  color: rgb(183, 178, 212);
+}
+
+input[type=submit] {
+  font-size: 1.2em;
+  background-color: rgb(59, 75, 128);
+  color:rgb(164, 199, 199);
+  border: 4px rgb(31, 42, 90) solid;
+  margin-left: 5%;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(26, 6, 73);
+  border: 4px rgb(77, 110, 201) solid;
+}
+
+.accepted, .pending {
+  border: 4px rgb(31, 42, 90) solid;
+  
+  margin-left: 20%;
+  padding: 1% 2%;
+}
+
+.accepted {
+  background-color: rgb(59, 128, 99);
+  color:rgb(164, 199, 199);
+}
+
+.pending {
+  background-color: rgb(59, 75, 128);
+  color:rgb(164, 199, 199);
+}
+
+.removeFriend {
+  background-color: rgb(59, 75, 128);
+  color:rgb(164, 199, 199);
+  border: 4px rgb(31, 42, 90) solid;
+  margin: 2%;
+  
+  position: relative;
+  left: 5%;
+}
+
+/* SOLO OPTIONS COMPONENT */
+
+/* Styles for the Home React component */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.solo-options {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(36, 34, 46);
+
+}
+
+.options-bg {
+  width: 25%;
+  height: 45%;
+  background-color: rgb(31, 42, 90);
+  border: 6px rgb(0,0,0) solid;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.op1-link {
+  margin-top: -8%;
+  text-decoration: none;
+}
+
+.op2-link {
+  text-decoration: none;
+}
+
+.op3-link {
+  margin-top: 8%;
+  text-decoration: none;
+}
+
+.menu-link {
+  text-decoration: none;
+}
+
+.win-link {
+  text-decoration: none;
+}
+
+.lose-link {
+  text-decoration: none;
+}
