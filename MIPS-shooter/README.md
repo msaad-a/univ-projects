@@ -17,9 +17,9 @@ Once you open the file with MARS, follow these steps to run the game:
 6) Now run the file and the game will be shown on the Bitmap Display, use the bottom portion of the Keyboard and Display MMIO Simulator to use keyboard controls
 
 Controls:
-J and K to move left and right
-X to shoot your blaster
-S to restart the game
+- J and K to move left and right
+- X to shoot your blaster
+- S to restart the game
 
 Game functionality:
 - The centipede will start at the top left corner, and make its way down each row
